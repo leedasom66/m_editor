@@ -1,0 +1,197 @@
+body {
+	padding: 0px;
+	margin: 0px;
+}
+#wrapper {
+	position:fixed;
+	width: 100%;
+	height: 100%;
+
+}
+#top {
+	padding: 15px;
+	display: block;
+	width: 100%;
+	height: 600px;
+}
+
+#top-bar{
+	padding: 15px;
+	display: block;
+	width: 100%;
+	height: 600px;
+
+}
+
+#webCam {
+	float: left;
+	display: inline;
+	border: 2px solid black;
+	width: 800px;
+	height: 600px;
+	margin-left: 0.5%;
+	position:relative;
+}
+
+#contentsArea {
+	float: left;
+	display: inline;
+	border: 2px solid black;
+	width: 800px;
+	height: 600px;
+	margin-left: 0.5%;
+	position:absolute;
+}
+
+#contentsArea img {
+
+	width: auto;
+	max-height: 600px;
+	display : block;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: transparent;
+
+
+}
+
+
+#top-left {
+	float: left;
+	width: 4%;
+}
+
+
+#top-right {
+	float: left;
+}
+
+#playlist {
+	border: 2px solid black;
+	width: 280px;
+	height: 600px;
+}
+#makePlayset {
+	border: 2px solid black;
+	width: 570px;
+	margin-top: 15px;
+	height: 200px;
+}
+#bottom {
+	clear: both;
+	padding-bottom: 15px;
+	padding-top: 5px;
+	width: 100%;
+	height: 300px;
+}
+#timeline {
+	border: 2px solid black;
+}
+#timeTable {
+	padding: 0px;
+	overflow: scroll;
+	width: 99%;
+	margin-bottom: 5px;
+	border-collapse: collapse;
+}
+
+.top-menu {
+
+	background-color: black;
+	color : aquamarine;
+
+}
+
+.tab-wrap * { 
+	margin: 0px; 
+	padding: 0px; 
+}
+
+.tab-wrap { 
+	position: relative; 
+	padding-top: 30px; 
+}
+.tab-wrap li {
+	z-index: 2; 
+	position: absolute; 
+	top: 0px;
+	width: 140px;
+	height: 30px; 
+	text-indent: -9999%; 
+}
+.tab-wrap li:nth-of-type(1) { 
+	left: 0px; 
+}
+.tab-wrap li:nth-of-type(2) { 
+	left: 140px; 
+}
+.tab-wrap li a {
+	display: block;
+	width: 100%; 
+	height: 100%; 
+}
+.tab-wrap article h1 {
+	position: absolute;
+	top: 0px;	
+	width: 140px; 
+	height: 30px; 
+	line-height: 30px; 
+	box-sizing: border-box; 
+	border: 1px solid #ddd; 
+	text-align: center; 
+	font-size: 12px; 
+}
+.tab-wrap article div { 
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+.tab-wrap article:target h1 { 
+	background-color: yellow; 
+}
+.tab-wrap article:nth-of-type(1) h1 { 
+	left: 0px; 
+}
+.tab-wrap article:nth-of-type(2) h1 { 
+	left: 140px; 
+}
+.tab-wrap article:nth-of-type(1) div { 
+	display: none;
+}
+.tab-wrap article div { 
+	display: none; 
+}
+.tab-wrap article:target div { 
+	display: block; 
+}
+#addTrack, #deleteTrack {
+	float: left;
+	width: 200px;
+}
+#play {
+	float: right;
+	width: 200px;
+}
+.rect {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: -1000px;
+    top: -1000px;
+}
+
+.contents-container img {
+	/* Avoid margin top issue (Occur only when margin-top <= -height) */
+	display: block;
+	min-width: 0 !important;
+	max-width: none !important;
+	min-height: 0 !important;
+	max-height: none !important;
+	width: 100%;
+	height: 100%;
+	image-orientation: 0deg
+}
+
+#feature button {
+	background-color: #2e2f33;
+	color: white;
+}

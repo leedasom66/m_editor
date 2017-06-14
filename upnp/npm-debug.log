@@ -1,0 +1,420 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'peer-upnp' ]
+2 info using npm@3.10.3
+3 info using node@v6.3.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData peer-upnp
+8 silly fetchNamedPackageData peer-upnp
+9 silly mapToRegistry name peer-upnp
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'peer-upnp',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'peer-upnp',
+12 silly mapToRegistry   name: 'peer-upnp',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/peer-upnp
+14 verbose request uri https://registry.npmjs.org/peer-upnp
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 15:13:21
+17 verbose request id 3418b210dfd42382
+18 verbose etag "8PEN2Y8ZPZO2L6M3W4UIDXK61"
+19 http request GET https://registry.npmjs.org/peer-upnp
+20 http 304 https://registry.npmjs.org/peer-upnp
+21 verbose headers { date: 'Thu, 14 Jul 2016 06:13:23 GMT',
+21 verbose headers   via: '1.1 varnish',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   etag: '"8PEN2Y8ZPZO2L6M3W4UIDXK61"',
+21 verbose headers   age: '145',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'x-served-by': 'cache-nrt6128-NRT',
+21 verbose headers   'x-cache': 'HIT',
+21 verbose headers   'x-cache-hits': '1',
+21 verbose headers   'x-timer': 'S1468476803.555765,VS0,VE0',
+21 verbose headers   vary: 'Accept-Encoding' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Thu, 14 Jul 2016 06:13:23 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     etag: '"8PEN2Y8ZPZO2L6M3W4UIDXK61"',
+22 silly get     age: '145',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-nrt6128-NRT',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1468476803.555765,VS0,VE0',
+22 silly get     vary: 'Accept-Encoding' } ]
+23 verbose etag https://registry.npmjs.org/peer-upnp from cache
+24 verbose get saving peer-upnp to C:\Users\Dasom\AppData\Roaming\npm-cache\registry.npmjs.org\peer-upnp\.cache.json
+25 verbose correctMkdir C:\Users\Dasom\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+26 silly install normalizeTree
+27 silly loadCurrentTree Finishing
+28 silly loadIdealTree Starting
+29 silly install loadIdealTree
+30 silly cloneCurrentTree Starting
+31 silly install cloneCurrentTreeToIdealTree
+32 silly cloneCurrentTree Finishing
+33 silly loadShrinkwrap Starting
+34 silly install loadShrinkwrap
+35 silly loadShrinkwrap Finishing
+36 silly loadAllDepsIntoIdealTree Starting
+37 silly install loadAllDepsIntoIdealTree
+38 silly resolveWithNewModule peer-upnp@0.0.5 checking installable status
+39 silly cache add args [ 'peer-upnp', null ]
+40 verbose cache add spec peer-upnp
+41 silly cache add parsed spec Result {
+41 silly cache add   raw: 'peer-upnp',
+41 silly cache add   scope: null,
+41 silly cache add   escapedName: 'peer-upnp',
+41 silly cache add   name: 'peer-upnp',
+41 silly cache add   rawSpec: '',
+41 silly cache add   spec: 'latest',
+41 silly cache add   type: 'tag' }
+42 silly addNamed peer-upnp@latest
+43 verbose addNamed "latest" is being treated as a dist-tag for peer-upnp
+44 info addNameTag [ 'peer-upnp', 'latest' ]
+45 silly mapToRegistry name peer-upnp
+46 silly mapToRegistry using default registry
+47 silly mapToRegistry registry https://registry.npmjs.org/
+48 silly mapToRegistry data Result {
+48 silly mapToRegistry   raw: 'peer-upnp',
+48 silly mapToRegistry   scope: null,
+48 silly mapToRegistry   escapedName: 'peer-upnp',
+48 silly mapToRegistry   name: 'peer-upnp',
+48 silly mapToRegistry   rawSpec: '',
+48 silly mapToRegistry   spec: 'latest',
+48 silly mapToRegistry   type: 'tag' }
+49 silly mapToRegistry uri https://registry.npmjs.org/peer-upnp
+50 verbose addNameTag registry:https://registry.npmjs.org/peer-upnp not in flight; fetching
+51 verbose get https://registry.npmjs.org/peer-upnp not expired, no request
+52 silly addNameTag next cb for peer-upnp with tag latest
+53 silly addNamed peer-upnp@0.0.5
+54 verbose addNamed "0.0.5" is a plain semver version for peer-upnp
+55 silly cache afterAdd peer-upnp@0.0.5
+56 verbose afterAdd C:\Users\Dasom\AppData\Roaming\npm-cache\peer-upnp\0.0.5\package\package.json not in flight; writing
+57 verbose correctMkdir C:\Users\Dasom\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+58 verbose afterAdd C:\Users\Dasom\AppData\Roaming\npm-cache\peer-upnp\0.0.5\package\package.json written
+59 silly fetchNamedPackageData peer-ssdp
+60 silly mapToRegistry name peer-ssdp
+61 silly mapToRegistry using default registry
+62 silly mapToRegistry registry https://registry.npmjs.org/
+63 silly mapToRegistry data Result {
+63 silly mapToRegistry   raw: 'peer-ssdp',
+63 silly mapToRegistry   scope: null,
+63 silly mapToRegistry   escapedName: 'peer-ssdp',
+63 silly mapToRegistry   name: 'peer-ssdp',
+63 silly mapToRegistry   rawSpec: '',
+63 silly mapToRegistry   spec: 'latest',
+63 silly mapToRegistry   type: 'tag' }
+64 silly mapToRegistry uri https://registry.npmjs.org/peer-ssdp
+65 silly fetchNamedPackageData ejs
+66 silly mapToRegistry name ejs
+67 silly mapToRegistry using default registry
+68 silly mapToRegistry registry https://registry.npmjs.org/
+69 silly mapToRegistry data Result {
+69 silly mapToRegistry   raw: 'ejs',
+69 silly mapToRegistry   scope: null,
+69 silly mapToRegistry   escapedName: 'ejs',
+69 silly mapToRegistry   name: 'ejs',
+69 silly mapToRegistry   rawSpec: '',
+69 silly mapToRegistry   spec: 'latest',
+69 silly mapToRegistry   type: 'tag' }
+70 silly mapToRegistry uri https://registry.npmjs.org/ejs
+71 silly fetchNamedPackageData node-uuid
+72 silly mapToRegistry name node-uuid
+73 silly mapToRegistry using default registry
+74 silly mapToRegistry registry https://registry.npmjs.org/
+75 silly mapToRegistry data Result {
+75 silly mapToRegistry   raw: 'node-uuid',
+75 silly mapToRegistry   scope: null,
+75 silly mapToRegistry   escapedName: 'node-uuid',
+75 silly mapToRegistry   name: 'node-uuid',
+75 silly mapToRegistry   rawSpec: '',
+75 silly mapToRegistry   spec: 'latest',
+75 silly mapToRegistry   type: 'tag' }
+76 silly mapToRegistry uri https://registry.npmjs.org/node-uuid
+77 silly fetchOtherPackageData xml2js@git+https://github.com/fraunhoferfokus/node-xml2js.git
+78 silly cache add args [ 'xml2js@git+https://github.com/fraunhoferfokus/node-xml2js.git',
+78 silly cache add   null ]
+79 verbose cache add spec xml2js@git+https://github.com/fraunhoferfokus/node-xml2js.git
+80 silly cache add parsed spec Result {
+80 silly cache add   raw: 'xml2js@git+https://github.com/fraunhoferfokus/node-xml2js.git',
+80 silly cache add   scope: null,
+80 silly cache add   escapedName: 'xml2js',
+80 silly cache add   name: 'xml2js',
+80 silly cache add   rawSpec: 'git+https://github.com/fraunhoferfokus/node-xml2js.git',
+80 silly cache add   spec: 'git+https://github.com/fraunhoferfokus/node-xml2js.git',
+80 silly cache add   type: 'hosted',
+80 silly cache add   hosted:
+80 silly cache add    { type: 'github',
+80 silly cache add      ssh: 'git@github.com:fraunhoferfokus/node-xml2js.git',
+80 silly cache add      sshUrl: 'git+ssh://git@github.com/fraunhoferfokus/node-xml2js.git',
+80 silly cache add      httpsUrl: 'git+https://github.com/fraunhoferfokus/node-xml2js.git',
+80 silly cache add      gitUrl: 'git://github.com/fraunhoferfokus/node-xml2js.git',
+80 silly cache add      shortcut: 'github:fraunhoferfokus/node-xml2js',
+80 silly cache add      directUrl: 'https://raw.githubusercontent.com/fraunhoferfokus/node-xml2js/master/package.json' } }
+81 verbose addRemoteGit caching git+https://github.com/fraunhoferfokus/node-xml2js.git
+82 verbose addRemoteGit git+https://github.com/fraunhoferfokus/node-xml2js.git is a repository hosted by github
+83 silly tryClone cloning git+https://github.com/fraunhoferfokus/node-xml2js.git via git+https://github.com/fraunhoferfokus/node-xml2js.git
+84 verbose tryClone git-https-github-com-fraunhoferfokus-node-xml2js-git-8b869871 not in flight; caching
+85 verbose correctMkdir C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes correctMkdir not in flight; initializing
+86 warn addRemoteGit Error: not found: git
+86 warn addRemoteGit     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+86 warn addRemoteGit     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+86 warn addRemoteGit     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+86 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+86 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+86 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+86 warn addRemoteGit     at FSReqWrap.oncomplete (fs.js:123:15)
+86 warn addRemoteGit  git+https://github.com/fraunhoferfokus/node-xml2js.git resetting remote C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-fraunhoferfokus-node-xml2js-git-8b869871 because of error: { Error: not found: git
+86 warn addRemoteGit     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+86 warn addRemoteGit     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+86 warn addRemoteGit     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+86 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+86 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+86 warn addRemoteGit     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+86 warn addRemoteGit     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ENOGIT' }
+87 info resetRemote resetting C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-fraunhoferfokus-node-xml2js-git-8b869871 for git+https://github.com/fraunhoferfokus/node-xml2js.git
+88 silly gentlyRm C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-fraunhoferfokus-node-xml2js-git-8b869871 is being purged
+89 verbose gentlyRm don't care about contents; nuking C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-fraunhoferfokus-node-xml2js-git-8b869871
+90 silly vacuum-fs purging C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-fraunhoferfokus-node-xml2js-git-8b869871
+91 verbose request uri https://registry.npmjs.org/peer-ssdp
+92 verbose request no auth needed
+93 info attempt registry request try #1 at 15:13:21
+94 verbose etag "H4BZT84ZPPF30ZZDB2FIDQKF"
+95 http request GET https://registry.npmjs.org/peer-ssdp
+96 verbose request uri https://registry.npmjs.org/ejs
+97 verbose request no auth needed
+98 info attempt registry request try #1 at 15:13:21
+99 verbose etag "EK7ZHWH3B4U2Y1HE5P48XTPMP"
+100 http request GET https://registry.npmjs.org/ejs
+101 verbose request uri https://registry.npmjs.org/node-uuid
+102 verbose request no auth needed
+103 info attempt registry request try #1 at 15:13:21
+104 verbose etag "92GNFLLLGAR5E0355TLFKUYFR"
+105 http request GET https://registry.npmjs.org/node-uuid
+106 silly vacuum-fs quitting because other entries in C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes
+107 error git clone --template=C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/fraunhoferfokus/node-xml2js.git C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-fraunhoferfokus-node-xml2js-git-8b869871: undefined
+107 error git clone --template=C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes\_templates --mirror https://github.com/fraunhoferfokus/node-xml2js.git C:\Users\Dasom\AppData\Roaming\npm-cache\_git-remotes\git-https-github-com-fraunhoferfokus-node-xml2js-git-8b869871: undefined
+108 silly fetchPackageMetaData Error: not found: git
+108 silly fetchPackageMetaData     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+108 silly fetchPackageMetaData     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+108 silly fetchPackageMetaData     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+108 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+108 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+108 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+108 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15)
+108 silly fetchPackageMetaData  error for xml2js@git+https://github.com/fraunhoferfokus/node-xml2js.git { Error: not found: git
+108 silly fetchPackageMetaData     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+108 silly fetchPackageMetaData     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+108 silly fetchPackageMetaData     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+108 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+108 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+108 silly fetchPackageMetaData     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+108 silly fetchPackageMetaData     at FSReqWrap.oncomplete (fs.js:123:15) code: 'ENOGIT' }
+109 http 304 https://registry.npmjs.org/peer-ssdp
+110 verbose headers { date: 'Thu, 14 Jul 2016 06:13:23 GMT',
+110 verbose headers   via: '1.1 varnish',
+110 verbose headers   'cache-control': 'max-age=300',
+110 verbose headers   etag: '"H4BZT84ZPPF30ZZDB2FIDQKF"',
+110 verbose headers   age: '144',
+110 verbose headers   connection: 'keep-alive',
+110 verbose headers   'x-served-by': 'cache-nrt6128-NRT',
+110 verbose headers   'x-cache': 'HIT',
+110 verbose headers   'x-cache-hits': '1',
+110 verbose headers   'x-timer': 'S1468476803.797488,VS0,VE0',
+110 verbose headers   vary: 'Accept-Encoding' }
+111 silly get cb [ 304,
+111 silly get   { date: 'Thu, 14 Jul 2016 06:13:23 GMT',
+111 silly get     via: '1.1 varnish',
+111 silly get     'cache-control': 'max-age=300',
+111 silly get     etag: '"H4BZT84ZPPF30ZZDB2FIDQKF"',
+111 silly get     age: '144',
+111 silly get     connection: 'keep-alive',
+111 silly get     'x-served-by': 'cache-nrt6128-NRT',
+111 silly get     'x-cache': 'HIT',
+111 silly get     'x-cache-hits': '1',
+111 silly get     'x-timer': 'S1468476803.797488,VS0,VE0',
+111 silly get     vary: 'Accept-Encoding' } ]
+112 verbose etag https://registry.npmjs.org/peer-ssdp from cache
+113 verbose get saving peer-ssdp to C:\Users\Dasom\AppData\Roaming\npm-cache\registry.npmjs.org\peer-ssdp\.cache.json
+114 verbose correctMkdir C:\Users\Dasom\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+115 silly resolveWithNewModule peer-ssdp@0.0.5 checking installable status
+116 silly cache add args [ 'peer-ssdp@0.0.5', null ]
+117 verbose cache add spec peer-ssdp@0.0.5
+118 silly cache add parsed spec Result {
+118 silly cache add   raw: 'peer-ssdp@0.0.5',
+118 silly cache add   scope: null,
+118 silly cache add   escapedName: 'peer-ssdp',
+118 silly cache add   name: 'peer-ssdp',
+118 silly cache add   rawSpec: '0.0.5',
+118 silly cache add   spec: '0.0.5',
+118 silly cache add   type: 'version' }
+119 silly addNamed peer-ssdp@0.0.5
+120 verbose addNamed "0.0.5" is a plain semver version for peer-ssdp
+121 silly mapToRegistry name peer-ssdp
+122 silly mapToRegistry using default registry
+123 silly mapToRegistry registry https://registry.npmjs.org/
+124 silly mapToRegistry data Result {
+124 silly mapToRegistry   raw: 'peer-ssdp',
+124 silly mapToRegistry   scope: null,
+124 silly mapToRegistry   escapedName: 'peer-ssdp',
+124 silly mapToRegistry   name: 'peer-ssdp',
+124 silly mapToRegistry   rawSpec: '',
+124 silly mapToRegistry   spec: 'latest',
+124 silly mapToRegistry   type: 'tag' }
+125 silly mapToRegistry uri https://registry.npmjs.org/peer-ssdp
+126 verbose addNameVersion registry:https://registry.npmjs.org/peer-ssdp not in flight; fetching
+127 verbose get https://registry.npmjs.org/peer-ssdp not expired, no request
+128 silly cache afterAdd peer-ssdp@0.0.5
+129 verbose afterAdd C:\Users\Dasom\AppData\Roaming\npm-cache\peer-ssdp\0.0.5\package\package.json not in flight; writing
+130 verbose correctMkdir C:\Users\Dasom\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+131 verbose afterAdd C:\Users\Dasom\AppData\Roaming\npm-cache\peer-ssdp\0.0.5\package\package.json written
+132 http 304 https://registry.npmjs.org/ejs
+133 verbose headers { date: 'Thu, 14 Jul 2016 06:13:23 GMT',
+133 verbose headers   via: '1.1 varnish',
+133 verbose headers   'cache-control': 'max-age=300',
+133 verbose headers   etag: '"EK7ZHWH3B4U2Y1HE5P48XTPMP"',
+133 verbose headers   age: '279',
+133 verbose headers   connection: 'keep-alive',
+133 verbose headers   'x-served-by': 'cache-nrt6128-NRT',
+133 verbose headers   'x-cache': 'HIT',
+133 verbose headers   'x-cache-hits': '4',
+133 verbose headers   'x-timer': 'S1468476803.854695,VS0,VE0',
+133 verbose headers   vary: 'Accept-Encoding' }
+134 silly get cb [ 304,
+134 silly get   { date: 'Thu, 14 Jul 2016 06:13:23 GMT',
+134 silly get     via: '1.1 varnish',
+134 silly get     'cache-control': 'max-age=300',
+134 silly get     etag: '"EK7ZHWH3B4U2Y1HE5P48XTPMP"',
+134 silly get     age: '279',
+134 silly get     connection: 'keep-alive',
+134 silly get     'x-served-by': 'cache-nrt6128-NRT',
+134 silly get     'x-cache': 'HIT',
+134 silly get     'x-cache-hits': '4',
+134 silly get     'x-timer': 'S1468476803.854695,VS0,VE0',
+134 silly get     vary: 'Accept-Encoding' } ]
+135 verbose etag https://registry.npmjs.org/ejs from cache
+136 verbose get saving ejs to C:\Users\Dasom\AppData\Roaming\npm-cache\registry.npmjs.org\ejs\.cache.json
+137 verbose correctMkdir C:\Users\Dasom\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+138 http 304 https://registry.npmjs.org/node-uuid
+139 verbose headers { date: 'Thu, 14 Jul 2016 06:13:23 GMT',
+139 verbose headers   via: '1.1 varnish',
+139 verbose headers   'cache-control': 'max-age=300',
+139 verbose headers   etag: '"92GNFLLLGAR5E0355TLFKUYFR"',
+139 verbose headers   age: '283',
+139 verbose headers   connection: 'keep-alive',
+139 verbose headers   'x-served-by': 'cache-nrt6131-NRT',
+139 verbose headers   'x-cache': 'HIT',
+139 verbose headers   'x-cache-hits': '9',
+139 verbose headers   'x-timer': 'S1468476803.859118,VS0,VE0',
+139 verbose headers   vary: 'Accept-Encoding' }
+140 silly get cb [ 304,
+140 silly get   { date: 'Thu, 14 Jul 2016 06:13:23 GMT',
+140 silly get     via: '1.1 varnish',
+140 silly get     'cache-control': 'max-age=300',
+140 silly get     etag: '"92GNFLLLGAR5E0355TLFKUYFR"',
+140 silly get     age: '283',
+140 silly get     connection: 'keep-alive',
+140 silly get     'x-served-by': 'cache-nrt6131-NRT',
+140 silly get     'x-cache': 'HIT',
+140 silly get     'x-cache-hits': '9',
+140 silly get     'x-timer': 'S1468476803.859118,VS0,VE0',
+140 silly get     vary: 'Accept-Encoding' } ]
+141 verbose etag https://registry.npmjs.org/node-uuid from cache
+142 verbose get saving node-uuid to C:\Users\Dasom\AppData\Roaming\npm-cache\registry.npmjs.org\node-uuid\.cache.json
+143 verbose correctMkdir C:\Users\Dasom\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+144 silly resolveWithNewModule ejs@0.8.4 checking installable status
+145 silly cache add args [ 'ejs@0.8.4', null ]
+146 verbose cache add spec ejs@0.8.4
+147 silly cache add parsed spec Result {
+147 silly cache add   raw: 'ejs@0.8.4',
+147 silly cache add   scope: null,
+147 silly cache add   escapedName: 'ejs',
+147 silly cache add   name: 'ejs',
+147 silly cache add   rawSpec: '0.8.4',
+147 silly cache add   spec: '0.8.4',
+147 silly cache add   type: 'version' }
+148 silly addNamed ejs@0.8.4
+149 verbose addNamed "0.8.4" is a plain semver version for ejs
+150 silly mapToRegistry name ejs
+151 silly mapToRegistry using default registry
+152 silly mapToRegistry registry https://registry.npmjs.org/
+153 silly mapToRegistry data Result {
+153 silly mapToRegistry   raw: 'ejs',
+153 silly mapToRegistry   scope: null,
+153 silly mapToRegistry   escapedName: 'ejs',
+153 silly mapToRegistry   name: 'ejs',
+153 silly mapToRegistry   rawSpec: '',
+153 silly mapToRegistry   spec: 'latest',
+153 silly mapToRegistry   type: 'tag' }
+154 silly mapToRegistry uri https://registry.npmjs.org/ejs
+155 verbose addNameVersion registry:https://registry.npmjs.org/ejs not in flight; fetching
+156 verbose get https://registry.npmjs.org/ejs not expired, no request
+157 silly cache afterAdd ejs@0.8.4
+158 verbose afterAdd C:\Users\Dasom\AppData\Roaming\npm-cache\ejs\0.8.4\package\package.json not in flight; writing
+159 verbose correctMkdir C:\Users\Dasom\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+160 silly resolveWithNewModule node-uuid@1.4.0 checking installable status
+161 silly cache add args [ 'node-uuid@1.4.0', null ]
+162 verbose cache add spec node-uuid@1.4.0
+163 silly cache add parsed spec Result {
+163 silly cache add   raw: 'node-uuid@1.4.0',
+163 silly cache add   scope: null,
+163 silly cache add   escapedName: 'node-uuid',
+163 silly cache add   name: 'node-uuid',
+163 silly cache add   rawSpec: '1.4.0',
+163 silly cache add   spec: '1.4.0',
+163 silly cache add   type: 'version' }
+164 silly addNamed node-uuid@1.4.0
+165 verbose addNamed "1.4.0" is a plain semver version for node-uuid
+166 silly mapToRegistry name node-uuid
+167 silly mapToRegistry using default registry
+168 silly mapToRegistry registry https://registry.npmjs.org/
+169 silly mapToRegistry data Result {
+169 silly mapToRegistry   raw: 'node-uuid',
+169 silly mapToRegistry   scope: null,
+169 silly mapToRegistry   escapedName: 'node-uuid',
+169 silly mapToRegistry   name: 'node-uuid',
+169 silly mapToRegistry   rawSpec: '',
+169 silly mapToRegistry   spec: 'latest',
+169 silly mapToRegistry   type: 'tag' }
+170 silly mapToRegistry uri https://registry.npmjs.org/node-uuid
+171 verbose addNameVersion registry:https://registry.npmjs.org/node-uuid not in flight; fetching
+172 verbose afterAdd C:\Users\Dasom\AppData\Roaming\npm-cache\ejs\0.8.4\package\package.json written
+173 verbose get https://registry.npmjs.org/node-uuid not expired, no request
+174 silly cache afterAdd node-uuid@1.4.0
+175 verbose afterAdd C:\Users\Dasom\AppData\Roaming\npm-cache\node-uuid\1.4.0\package\package.json not in flight; writing
+176 verbose correctMkdir C:\Users\Dasom\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+177 verbose afterAdd C:\Users\Dasom\AppData\Roaming\npm-cache\node-uuid\1.4.0\package\package.json written
+178 silly rollbackFailedOptional Starting
+179 silly rollbackFailedOptional Finishing
+180 silly runTopLevelLifecycles Starting
+181 silly runTopLevelLifecycles Finishing
+182 silly install printInstalled
+183 verbose stack Error: not found: git
+183 verbose stack     at getNotFoundError (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:14:12)
+183 verbose stack     at F (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:69:19)
+183 verbose stack     at E (C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:81:29)
+183 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\which.js:90:16
+183 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\index.js:44:5
+183 verbose stack     at C:\Program Files\nodejs\node_modules\npm\node_modules\which\node_modules\isexe\windows.js:29:5
+183 verbose stack     at FSReqWrap.oncomplete (fs.js:123:15)
+184 verbose cwd C:\Users\Dasom\WebstormProjects\test\upnp_ver1
+185 error Windows_NT 10.0.10586
+186 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "peer-upnp"
+187 error node v6.3.0
+188 error npm  v3.10.3
+189 error code ENOGIT
+190 error not found: git
+191 error Failed using git.
+191 error This is most likely not a problem with npm itself.
+191 error Please check if you have git installed and in your PATH.
+192 verbose exit [ 1, true ]

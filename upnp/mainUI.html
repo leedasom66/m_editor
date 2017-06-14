@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Interface Main UI</title>
+
+	<link rel="stylesheet" type="text/css" href="css/mainUI.css" />
+	<link rel="stylesheet" type="text/css" href="./dragdealer.css" />
+
+	<script language="javascript" type="text/javascript" src="js/dynamicTable.js"></script>
+	<script language="javascript" type="text/javascript" src="js/detectRect.js"></script>
+	<script language="javascript" type="text/javascript" src="js/selectContents.js"></script>
+	<script language="javascript" type="text/javascript" src="js/tracking.js"></script>
+	<script language="javascript" type="text/javascript" src="js/html2canvas.js"></script>
+	<script src="dat.gui.min.js"></script>
+	<script src="stats.min.js"></script>
+	<script src="color_camera_gui.js"></script>
+
+
+	<script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+	<script src="./dragdealer.js"></script>
+	<script src="js/tracking.js"></script>
+	<script src="./plug.upnp.js"></script>
+
+	<script>
+		var ip = []; //devices' ip address
+
+		//Web Socket Connection, Connected on server
+		var ws = new WebSocket("ws://192.168.0.14:3000");
+		ws.onopen = function(e) {
+			console.log("Connected.");
+		}
+
+
+		window.onload = init;
+
+		function init() {
+			// Detect Device by color
+			detectRec();
+		}
+
+	</script>
+
+</head>
+<body>
+<div id="wrapper">
+	<div id="top">
+        <div id="webCam" class="demo-container">
+			<!--<button type="button" id="capture" onclick="init()" style="width: 200px; margin-left: 7px; display: inline;">Capture</button>-->
+			<video id="video" width="800px" height="600px" style="position:absolute" preload loop autoplay></video>
+			<canvas id="canvas" width="800px" height="600px" style="position:absolute"></canvas>
+
+		</div>
+
+		<div id="top-right">
+			<div id="playlist" class="tab-wrap">
+				<ul>
+					<li><a href="#tab1">tab1</a></li>
+					<li><a href="#tab2">tab2</a></li>
+				</ul>
+				<div>
+					<article id="tab1">
+						<h1>Device List</h1>
+						<div style="overflow-x: hidden; overflow-y:scroll; height: 328px;">
+							<button type="button" id="detect" onclick="detectIP()" style="width:100px; margin-bottom: 10px;">Detect Devices</button>
+							<Button type="button" id="color" onclick="color()" style="width:100px; margin-bottom: 10px;">Color</button>
+							<Button type="button" id="clear" onclick="delete_contents('deviceTable')" style="width:100px; margin-bottom: 10px;">Clear</button>
+
+							<hr>
+
+							<table id="deviceTable" cellspacing="3" cellpadding="10">
+							</table>
+
+						</div>
+					</article>
+					<script>
+
+						ws.onmessage = function(e) {
+							console.log(e.data);
+							if (e.data === "color") console.log("color");
+							else {
+
+								ip = e.data.split(",");
+
+								for (var i in ip) {
+									console.log(ip[i]);
+									add_device_row('deviceTable', ip[i]);
+								}
+							}
+						}
+
+						function detectIP() {
+							ws.send("detect");
+						}
+
+						function color() {
+							var client = document.getElementById('selectedDeviceId').innerText;
+							ws.send(client);
+							ws.send("color");
+						}
+
+						function cleartable() {
+							console.log('clear');
+							table = document.getElementById('deviceTable');
+							for(var i = 1 ; i<=table.rows.length-1 ; i++)
+								table.deleteRow(1);
+
+						}
+
+					</script>
+					<article id="tab2">
+						<h1>Contents List</h1>
+						<div id="tab2div" style="overflow-x: hidden; overflow: scroll; height: 328px;">
+							<table id="contentsTable" cellspacing="0" width="540px">
+								<th colspan="2" height="30px">
+									<input type="file" id="myfiles" style="width: 48%; margin-top: 0px" multiple>
+									<script>
+										document.querySelector("#myfiles").onchange = pullfiles;
+										if(myfiles.onload()) add_row('contentsTable', pullfiles);
+									</script>
+									<button type="button" onclick="delete_contents('contentsTable')" style="margin-left: 5px; width: 48%;">Delete Contents</button>
+									<script>
+										document.ondrop = function(e) {
+											tab2div.style.backgroundColor = "#660000";
+											try {
+												/*
+												 e.preventDefault() 메서드는 기본 이벤트 발생을
+												 방지해 주는데 이 부분을 제거하고 탐색기에서
+												 이미지 파일을 Drop하면 그냥 그 파일이 브라우져에서 열립니다.
+												 URL을 보시면 그 이미지 파일 경로로 변경된걸 보실 수 있습니다.
+												 e.preventDefault() 메서드를 호출함으로 해서 그런 현상이
+												 나오지 않고 handleFileDrop 함수가 이미지를 처리하게 됩니다.
+												 */
+												e.preventDefault();
+												handleFileDrop(e.dataTransfer.files[0]);
+												return false;
+											} catch(err) {
+												console.log(err);
+											}
+										}
+										document.ondragover = function(e) {
+											e.preventDefault();
+											tab2div.style.backgroundColor = "#66FF00";
+										}
+
+										document.ondragleave = function(e) {
+											tab2div.style.backgroundColor = "#FFFFFF";
+										}
+
+										function handleFileDrop(file) {
+											var reader = new FileReader();
+											reader.readAsArrayBuffer(file);
+											reader.onload = function() {
+												console.log("Receiving " + file.name);
+												/*
+												 echo server로 보내면 서버는 받아서 그대로 다시 보내줌으로 해서
+												 위의 onmessage이벤트가 발하게 된다.
+												 */
+												var client = document.getElementById('selectedDeviceId').innerText;
+												console.log(client);
+												ws.send(client);
+												ws.send(reader.result);
+											}
+										}
+										// BLOB데이터를 가지고 URL객체를 만들어 내는 함수
+										function createObjectURL (blob) {
+											if ( window.URL ) {
+												return window.URL.createObjectURL( blob );
+											} else if ( window.URL && window.URL.createObjectURL ) {
+												return window.URL.createObjectURL( blob );
+											} else {
+												return null;
+											}
+										}
+
+									</script>
+								</th>
+							</table>
+						</div>
+					</article>
+				</div>
+			</div>
+			<div id="makePlayset">
+				<button type="button" onclick="makePlayset()" style="margin-left: 5px; width: 200px;">Make Playset</button>
+				<p style="margin-left: 7px; font-size: 15px;">Device ID: <span id="selectedDeviceId"></span></p>
+				<p style="margin-left: 7px; font-size: 15px;">Contents Name: <span id="selectedContentsName"></span></p>
+				<p style="margin-left: 7px; font-size: 15px; visibility: hidden; display:none;">Device IP: <span id="selectedDeviceIP"></span></p>
+				<p style="margin-left: 7px; font-size: 15px; visibility: hidden; display:none;">Contents Type: <span id="selectedContentsType"></span></p>
+			</div>
+		</div>
+	</div>
+	<button type="button" onclick="capture()" style="	margin-left: 15px;">Capture</button>
+	<div id="contentsEdit">
+		<img id="devicePositionCapture" width="400" height="300" style="background-color: transparent; margin-left: 15px">Captured Image</img>
+		<img id="editImgArea" src="dog.jpg" width="400" height="300">Contents Edit</img>
+	</div>
+
+	<script>
+
+		function capture() {
+			var canvas = document.getElementById("canvas");
+			var dataURL = canvas.toDataURL();
+			console.log(dataURL);
+			var img = document.getElementById("devicePositionCapture");
+			img.src = dataURL;
+			console.log(img.src);
+		}
+
+	</script>
+
+
+
+
+
+
+
+	<!--<div id="bottom" style="visibility:hidden;">-->
+
+		<!--<div id="timeline">-->
+			<!--<button type="button" id="addTrack" onclick="add_timeline('timeTable')" style="margin-left: 7px; margin-top: 7px; margin-bottom: 7px;">Add Track</button>-->
+			<!--<button type="button" id="deleteTrack" onclick="delete_timeline('timeTable')" style="float: left; margin-left: 7px; margin-top: 7px; margin-bottom: 7px;">Delete Track</button>-->
+			<!--<button type="button" id="play" onclick="saveSequence()" style="float: left; margin-left: 7px; margin-top: 7px; margin-bottom: 7px;">Play</button>-->
+
+			<!--<table id='timeTable' cellspacing="0" style="position: relative; padding: 0px;"'>-->
+				<!--<colgroup>-->
+					<!--<col width='80px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+					<!--<col width='90px' />-->
+				<!--</colgroup>-->
+
+				<!--<tr id='row0' style="position: relative; border: 1px solde black; padding: 0px;">-->
+					<!--<td align='center'></td>-->
+					<!--<td align='left'>1</td>-->
+					<!--<td align='left'>2</td>-->
+					<!--<td align='left'>3</td>-->
+					<!--<td align='left'>4</td>-->
+					<!--<td align='left'>5</td>-->
+					<!--<td align='left'>6</td>-->
+					<!--<td align='left'>7</td>-->
+					<!--<td align='left'>8</td>-->
+					<!--<td align='left'>9</td>-->
+					<!--<td align='left'>10</td>-->
+					<!--<td align='left'>11</td>-->
+					<!--<td align='left'>12</td>-->
+					<!--<td align='left'>13</td>-->
+					<!--<td align='left'>14</td>-->
+					<!--<td align='left'>15</td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</div>-->
+	<!--</div>-->
+</div>
+</body>
+</html>
